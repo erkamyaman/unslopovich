@@ -98,3 +98,16 @@ Check these first. Users complain about them far more often than about how an ap
 - **Accessibility:** label icon-only controls, keep focus order logical, respect reduce motion, and never use color as the only signal.
 - **Platform manners:** follow each platform's patterns when the app ships on both. Share the brand, not every control.
 
+## Native building blocks
+
+Prefer these to custom replacements. For other stacks, use the nearest equivalent.
+
+| Stack | Navigation | Lists and refresh | Sheets | Polish |
+|---|---|---|---|---|
+| SwiftUI | `NavigationStack`, `TabView` | `List`, `.swipeActions`, `.refreshable` | `.sheet` with `.presentationDetents` | SF Symbols, `.font(.body)` styles, `ContentUnavailableView`, `.sensoryFeedback` |
+| UIKit | `UINavigationController`, `UITabBarController` | `UICollectionView` lists, `UIRefreshControl` | `UISheetPresentationController` | SF Symbols, `preferredFont(forTextStyle:)`, `UIContentUnavailableConfiguration` |
+| Jetpack Compose | `Scaffold`, `TopAppBar`, `NavigationBar` | `LazyColumn`, `PullToRefreshBox` | `ModalBottomSheet` | `MaterialTheme.typography`, `WindowInsets.safeDrawing`, `Modifier.imePadding()` |
+| React Native, Expo | Native stack, native tabs where available | `FlatList` or FlashList, `RefreshControl` | Native modal presentation or a maintained sheet library already in the project | `Pressable`, `react-native-safe-area-context`, `KeyboardAvoidingView`, `expo-haptics` |
+| Flutter | `NavigationBar`, `CupertinoTabBar`, platform page routes | `ListView.builder`, `RefreshIndicator`, `CupertinoSliverRefreshControl` | `showModalBottomSheet` | `Theme.of(context).textTheme`, `SafeArea`, `.adaptive` constructors, `HapticFeedback` |
+| Ionic, Capacitor | `ion-tabs`, `ion-nav` or framework router, `ion-header` | `ion-list`, `ion-refresher`, virtual scrolling for long lists | `ion-modal` with breakpoints | Platform `mode`, `env(safe-area-inset-*)`, `@capacitor/haptics`, no hover-only behavior |
+
