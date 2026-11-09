@@ -6,7 +6,7 @@ Users don't hate your purple gradient. They hate what you did to the back button
 
 ![Before: a purple gradient dashboard full of sparkles and fake stats. After: a clean native list of zones and quick actions](docs/before-after.png)
 
-<sub>Staged demo. The patient was made extra purple on purpose. Yours may be less sick.</sub>
+<sub>Dramatization. Your app may be worse.</sub>
 
 ```bash
 npx unslopovich
