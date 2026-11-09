@@ -76,3 +76,12 @@ Check these first. Users complain about them far more often than about how an ap
 - Haptics on everything, or none on moments that deserve confirmation
 - Fixed heights that clip text when the user enlarges it
 
+### Copy
+
+- "Unlock your potential", "seamless", "effortless", "supercharge", "all in one place"
+- "Welcome back!" taking the best space on the screen
+- "Oops! Something went wrong" with no cause and no next step
+- Subtitles that repeat the title
+- Exclamation marks as personality
+- Vague buttons such as "Continue" or "Submit" where a verb would say what happens
+
