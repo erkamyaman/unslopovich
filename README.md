@@ -20,15 +20,18 @@ Then tell your agent:
 
 ## The doctor did the reading
 
-Dr. Unslopovich went through 231 real app reviews and developer comments. In the 104 App Store reviews, nobody mentioned a purple gradient.
+Dr. Unslopovich scanned 105,027 App Store reviews from 299 top apps. Exactly one mentioned a purple gradient. It was asking for one.
 
-Here's what made people furious instead:
+Here's what made people furious instead, in the 46,742 reviews rated 3 stars or lower:
 
-- **You moved the button.** Telegram's Contacts tab. Chrome's back arrow. Instagram's hold to pause.
-- **You put AI where the feature was.** Gemini in the toolbar. Alexa in the search box.
-- **You interrupted them.** Popups in the middle of ordering food.
-- **You never tried it on their phone.** Clipped layouts and buttons that vanish.
-- **You made everything look the same.** Gmail users can't tell read from unread.
+- **You made it slow.** 4,326 reviews about lag, glitches, and crashes.
+- **You moved the button.** 1,751. Telegram's Contacts tab. Chrome's back arrow. Instagram's hold to pause.
+- **You interrupted them.** 1,148. Popups in the middle of ordering food.
+- **You hid everything.** 859 said it was hard to find or use.
+- **You put AI where the feature was.** 705. Gemini in the toolbar. Alexa in the search box.
+- **You never tried it on their phone.** 345 about broken layouts.
+
+<sub>Most recent reviews from the US and UK App Stores. Keyword matches, so treat them as rough. Themes can overlap.</sub>
 
 So the doctor checks what users actually scream about first, and your gradient second.
 
@@ -36,6 +39,7 @@ So the doctor checks what users actually scream about first, and your gradient s
 
 - Controls that moved, vanished, or do nothing
 - AI features blocking the thing people came to do
+- Numbers and labels that lie
 - Website in a phone: hamburger menus, hero sections, fake tab bars
 - Cards inside cards inside cards
 - Emoji pretending to be icons
@@ -56,7 +60,7 @@ Sample verdicts. Yours may be worse.
 
 ## Treats
 
-SwiftUI, UIKit, Jetpack Compose, React Native, Expo, Flutter, Ionic, and Capacitor.
+SwiftUI, UIKit, Jetpack Compose, React Native, Expo, Flutter, Ionic, Capacitor, Angular Native, and NativeScript.
 
 It reads your theme, finds the problems, fixes the shared components first, and uses your platform's native building blocks. It won't move your users' favorite button without asking.
 
