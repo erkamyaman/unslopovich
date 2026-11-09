@@ -36,3 +36,19 @@ Check these first. Users complain about them far more often than about how an ap
 - Layouts that lose most of the screen to padding or chrome
 - Lag while scrolling, typing, or switching tabs
 
+### Looks generated
+
+- Purple, indigo, or blue-to-pink gradients on heroes, buttons, or backgrounds
+- Gradient text, glow shadows, decorative blobs, glass effects on everything
+- Sparkle icons, or emoji standing in for icons
+- Everything inside a rounded card, cards inside cards, one radius and one shadow everywhere
+- A row of stat tiles with invented numbers
+- Pill badges on things that are not statuses
+- One font size and weight doing every job, or a web font replacing good system type for no brand reason
+- Identical spacing everywhere, so nothing is grouped
+- Centered text and layouts where a list or left-aligned content would read faster
+- Low-contrast gray text on tinted backgrounds
+- Filler captions, annotations, and callouts that add nothing
+- Spaced-out small-caps labels above every section
+- Wrong or approximate logos, and duplicate buttons doing the same job
+
