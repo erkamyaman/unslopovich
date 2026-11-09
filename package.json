@@ -1,0 +1,21 @@
+{
+  "name": "unslopovich",
+  "version": "0.1.0",
+  "description": "Your app looks AI-generated. Dr. Unslopovich noticed. An agent skill that finds and fixes AI-looking UI and UX in mobile apps.",
+  "bin": {
+    "unslopovich": "bin/install.js"
+  },
+  "files": [
+    "SKILL.md",
+    "bin"
+  ],
+  "keywords": [
+    "agent-skill",
+    "claude-code",
+    "mobile",
+    "ui",
+    "ux",
+    "ai-slop"
+  ],
+  "license": "MIT"
+}
