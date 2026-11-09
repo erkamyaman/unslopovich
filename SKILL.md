@@ -52,3 +52,13 @@ Check these first. Users complain about them far more often than about how an ap
 - Spaced-out small-caps labels above every section
 - Wrong or approximate logos, and duplicate buttons doing the same job
 
+### Website in a phone
+
+- Hamburger menu in place of tabs for the few top destinations
+- Marketing hero, feature grid, or footer inside the app
+- Breadcrumbs, wide tables, or hover-dependent controls
+- Hand-built back buttons, navigation bars, or tab bars that lose native gestures
+- Centered modals for tasks that belong in a sheet or a pushed screen
+- Tiny links as the main way to act
+- Long forms on one screen with no sensible field order or input types
+
