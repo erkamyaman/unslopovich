@@ -85,3 +85,16 @@ Check these first. Users complain about them far more often than about how an ap
 - Exclamation marks as personality
 - Vague buttons such as "Continue" or "Submit" where a verb would say what happens
 
+## The standards
+
+- **Touch targets:** at least 44pt on iOS and 48dp on Android, including the padded hit area.
+- **Contrast:** 4.5:1 for body text, 3:1 for large text and meaningful icons.
+- **Type:** use platform text styles or a named scale. Support the user's text size setting.
+- **Safe areas:** backgrounds may run edge to edge. Content and controls may not sit under system UI.
+- **Hierarchy:** one primary action per screen, placed within thumb reach. Use size, weight, and space before adding color or containers.
+- **Spacing:** use a small scale. Related items sit closer than unrelated ones.
+- **Color:** define semantic roles such as background, surface, text, accent, and destructive. Use one accent, and make dark mode a real palette rather than an inversion.
+- **Navigation:** tabs for three to five peer destinations, push for drilling in, sheets for short side tasks.
+- **Accessibility:** label icon-only controls, keep focus order logical, respect reduce motion, and never use color as the only signal.
+- **Platform manners:** follow each platform's patterns when the app ships on both. Share the brand, not every control.
+
