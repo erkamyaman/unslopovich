@@ -62,3 +62,17 @@ Check these first. Users complain about them far more often than about how an ap
 - Tiny links as the main way to act
 - Long forms on one screen with no sensible field order or input types
 
+### Interaction gaps
+
+- No pressed state on tappable things
+- Only the happy path: missing loading, empty, error, and offline states
+- A spinner for everything, including content whose shape is known
+- Keyboard covers the focused input, wrong keyboard type, no submit action on the keyboard, or no easy way to dismiss it
+- Scrolling, text rendering, or transitions that do not match the platform
+- Content under the notch, home indicator, or system bars
+- Swipe back or predictive back broken
+- Long lists without pull to refresh where freshness matters, or without virtualization
+- Every element fading and sliding in on mount, or animation that blocks input
+- Haptics on everything, or none on moments that deserve confirmation
+- Fixed heights that clip text when the user enlarges it
+
