@@ -111,3 +111,39 @@ Prefer these to custom replacements. For other stacks, use the nearest equivalen
 | Flutter | `NavigationBar`, `CupertinoTabBar`, platform page routes | `ListView.builder`, `RefreshIndicator`, `CupertinoSliverRefreshControl` | `showModalBottomSheet` | `Theme.of(context).textTheme`, `SafeArea`, `.adaptive` constructors, `HapticFeedback` |
 | Ionic, Capacitor | `ion-tabs`, `ion-nav` or framework router, `ion-header` | `ion-list`, `ion-refresher`, virtual scrolling for long lists | `ion-modal` with breakpoints | Platform `mode`, `env(safe-area-inset-*)`, `@capacitor/haptics`, no hover-only behavior |
 
+## Rules of the fix
+
+- Replace slop with a decision that fits this product. Do not swap one generic look for another.
+- Remove before adding. Most screens improve by losing containers, colors, and copy.
+- Keep frequently used controls and gestures where users expect them. Ask before moving, removing, or redefining one.
+- Keep business logic, data flow, and analytics unchanged.
+- Ask before changing the navigation structure or the product's visual identity.
+- Ask before adding a dependency.
+- Mark invented data and placeholder content instead of polishing it.
+- Keep the diff to the agreed screens and the shared code they need.
+
+## Output format
+
+```text
+Dr. Unslopovich's diagnosis
+Verdict: <one dry sentence>
+Stack: <stack and platforms>
+Reviewed: <screens, and whether from a running app or code only>
+
+Critical
+- <file:line> <what is wrong> -> <specific fix>
+
+Noticeable
+- <file:line> <what is wrong> -> <specific fix>
+
+Minor
+- <file:line> <what is wrong> -> <specific fix>
+
+Worth keeping
+- <what already works>
+
+Not checked
+- <anything you could not verify>
+```
+
+After applying fixes, list what changed by screen and capture before and after screenshots when you can.
