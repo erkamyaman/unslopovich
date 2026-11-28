@@ -1192,7 +1192,7 @@ const rules = [
     message: "Hamburger menu or navigation drawer. It hides the top destinations behind a tap.",
     fix: "Ask first. Use tabs for three to five peer destinations; keep a drawer only for many destinations or a large-screen rail.",
     find({ code }) {
-      const re = /["']line\.(?:3\.horizontal|horizontal\.3)["']|\bIcons\.(?:Default\.|Filled\.|Outlined\.|Rounded\.|Sharp\.)?Menu\b|\bIcons\.menu(?:_rounded|_outlined|_sharp)?\b|\b(?:name|icon)=["']menu(?:-outline|-sharp)?["']|\bcreateDrawerNavigator\b|from\s+["']expo-router\/drawer["']|\b(?:Modal|Dismissible)NavigationDrawer\b|\bdrawer:\s*(?:const\s+)?\w*Drawer\b|<ion-menu\b|<IonMenu(?:Button|Toggle)?\b|<(?:q-drawer|QDrawer)(?![\w-])|<(?:mat-sidenav|mat-drawer)(?![\w-])|<(?:v-navigation-drawer|VNavigationDrawer)(?![\w-])|\bBars3(?:BottomLeft|BottomRight|CenterLeft)?Icon\b|\bIconMenu2\b/;
+      const re = /["']line\.(?:3\.horizontal|horizontal\.3)["']|\bIcons\.(?:Default\.|Filled\.|Outlined\.|Rounded\.|Sharp\.)?Menu\b|\bIcons\.menu(?:_rounded|_outlined|_sharp)?\b|\b(?:name|icon)=["']menu(?:-outline|-sharp)?["']|\bcreateDrawerNavigator\b|from\s+["']expo-router\/drawer["']|\b(?:Modal|Dismissible)NavigationDrawer\s*\(|\bdrawer:\s*(?:const\s+)?\w*Drawer\b|<ion-menu\b|<IonMenu(?:Button|Toggle)?\b|<(?:q-drawer|QDrawer)(?![\w-])|<(?:mat-sidenav|mat-drawer)(?![\w-])|<(?:v-navigation-drawer|VNavigationDrawer)(?![\w-])|\bBars3(?:BottomLeft|BottomRight|CenterLeft)?Icon\b|\bIconMenu2\b/;
       const first = matches(re, code).next();
       return first.done ? [] : [first.value.index];
     },
