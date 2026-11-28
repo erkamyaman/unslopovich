@@ -3151,3 +3151,47 @@ test("drawer-nav catches Vuetify v-navigation-drawer and VNavigationDrawer (issu
   const quiet = "<template><v-bottom-navigation><v-tabs /></v-bottom-navigation></template>\n";
   assert.deepStrictEqual(drawerLines(quiet), []);
 });
+
+test("drawer-nav catches Compose DismissibleNavigationDrawer and ModalNavigationDrawer, not PermanentNavigationDrawer (issue #328)", () => {
+  const drawerLines = (src, file = "Home.kt") =>
+    scanSource(src, file, { kind: "mobile" }).filter((f) => f.rule === "drawer-nav").map((f) => f.line);
+
+  const dismissible = [
+    "@Composable",
+    "fun Home() {",
+    '    DismissibleNavigationDrawer(drawerContent = { Text("Menu") }) {',
+    '        Text("Home")',
+    "    }",
+    "}",
+  ].join("\n");
+  assert.deepStrictEqual(drawerLines(dismissible), [3]);
+
+  const modal = dismissible.replace("DismissibleNavigationDrawer", "ModalNavigationDrawer");
+  assert.deepStrictEqual(drawerLines(modal), [3]);
+
+  const permanent = dismissible.replace("DismissibleNavigationDrawer", "PermanentNavigationDrawer");
+  assert.deepStrictEqual(drawerLines(permanent), []);
+
+  const importOnly = [
+    "import androidx.compose.material3.DismissibleNavigationDrawer",
+    "import androidx.compose.material3.PermanentNavigationDrawer",
+    "@Composable",
+    "fun Home() {",
+    '    PermanentNavigationDrawer(drawerContent = { Text("Menu") }) {',
+    '        Text("Home")',
+    "    }",
+    "}",
+  ].join("\n");
+  assert.deepStrictEqual(drawerLines(importOnly), []);
+  assert.deepStrictEqual(
+    scanSource(dismissible, "Home.kt", { kind: "web" }).filter((f) => f.rule === "drawer-nav"),
+    [],
+  );
+
+  const unusedImport = [
+    "import androidx.compose.material3.DismissibleNavigationDrawer",
+    "@Composable",
+    "fun Home() { Text(\"Home\") }",
+  ].join("\n");
+  assert.deepStrictEqual(drawerLines(unusedImport), []);
+});
